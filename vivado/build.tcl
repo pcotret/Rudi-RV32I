@@ -62,8 +62,8 @@ read_vhdl ../src/peripheral/peripheral_serial.vhd
 read_vhdl ../src/peripheral/peripheral_millis.vhd
 
 # board specific stuff
-read_vhdl ../src/boards/basys3_top_level.vhd
-read_xdc ../src/boards/basys3.xdc
+read_vhdl ../src/boards/basys3/basys3_top_level.vhd
+read_xdc ../src/boards/basys3/basys3.xdc
 
 # Synthesize Design
 synth_design -top basys3_top_level -part "xc7a35tcpg236-1" -flatten_hierarchy none
