@@ -9,3 +9,10 @@ In this directory:
 - test.tcl - TCL script to run the test bench to verify basic ISA operation
 
 If you want to use the GUI create your own Vivado project and just add in the required VHDL and constraints.
+
+Reminder to download the bitstream:
+
+```bash
+djtgcfg prog -d Nexys4DDR -i 0 -f ../bitstreams/nexys4ddr_top_level.bit 
+```
+

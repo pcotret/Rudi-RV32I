@@ -1,5 +1,5 @@
 --###############################################################################
---# basys3_top_level.vhd  - Top level HDL design for the Basys3 board
+--# nexys4ddr_top_level.vhd  - Top level HDL design for the Nexys4DDR board
 --#
 --# Part of the Rudi-RV32I project
 --#
@@ -36,7 +36,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.vcomponents.all;
 
-entity basys3_top_level is
+entity nexys4ddr_top_level is
   port ( clk100mhz    : in  STD_LOGIC;
          btnC         : in  STD_LOGIC;
          led          : inout std_logic_vector(15 downto 0);
@@ -44,7 +44,7 @@ entity basys3_top_level is
          uart_txd_in  : in  STD_LOGIC);
 end entity;
 
-architecture Behavioral of basys3_top_level is
+architecture Behavioral of nexys4ddr_top_level is
     constant ext_clock_rate       : natural   := 100000000;
     constant multiplier           : real      := 10.000;
     constant divider              : real      := 14.750;

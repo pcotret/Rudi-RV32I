@@ -31,7 +31,7 @@
 #
 ###############################################################################
 
-set_part "xc7a35tcpg236-1"
+set_part "xc7a100tcsg324-1"
 
 # read all design files
 read_vhdl ../src/systems/top_level_expanded.vhd
@@ -62,12 +62,12 @@ read_vhdl ../src/peripheral/peripheral_serial.vhd
 read_vhdl ../src/peripheral/peripheral_millis.vhd
 
 # board specific stuff
-read_vhdl ../src/boards/basys3/basys3_top_level.vhd
-read_xdc ../src/boards/basys3/basys3.xdc
+read_vhdl ../src/boards/nexys4ddr/nexys4ddr_top_level.vhd
+read_xdc ../src/boards/nexys4ddr/nexys4ddr.xdc
 
 # Synthesize Design
-synth_design -top basys3_top_level -part "xc7a35tcpg236-1" -flatten_hierarchy none
-write_checkpoint basys3_top_level_synth.dcp
+synth_design -top nexys4ddr_top_level -part "xc7a100tcsg324-1" -flatten_hierarchy none
+write_checkpoint nexys4ddr_top_level_synth.dcp
 
 # Opt Design 
 opt_design
@@ -76,10 +76,10 @@ place_design
 # Route Design
 route_design
 
-write_checkpoint basys3_top_level_route.dcp
+write_checkpoint nexys4ddr_top_level_route.dcp
 
 # Write the bitstream	
-write_bitstream -force -file ../bitstreams/basys3_top_level.bit
+write_bitstream -force -file ../bitstreams/nexys4ddr_top_level.bit
 
 # Generate reports
 report_timing -nworst 1

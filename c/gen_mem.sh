@@ -31,7 +31,7 @@
 # SOFTWARE.
 # 
 ###############################################################################
-OBJCOPY=/opt/riscv/bin/riscv32-unknown-linux-gnu-objcopy
+OBJCOPY=/opt/riscv_nz/bin/riscv32-unknown-linux-gnu-objcopy
 
 if [ ! -f "$1" ]
 then
