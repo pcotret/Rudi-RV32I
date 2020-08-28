@@ -55,9 +55,10 @@ bus and serial console.
 It's not hard - as long as you get the right RISC-V GNU toolchain installed.
 
 * Install Xilinx Vivado
-* Install RISC-V GNU toolchain from https://github.com/riscv/riscv-gnu-toolchain in /opt/riscv - use the rv32ia ISA and ilp32 ABI. Use this configure command when building the RISC-V toolchain:
+* Install RISC-V GNU toolchain from https://github.com/riscv/riscv-gnu-toolchain in /opt/riscv - use the rv32ia ISA and ilp32 ABI.
 ```
 ./configure --prefix=/opt/riscv --with-arch=rv32ia --with-abi=ilp32
+make linux
 ```
 * In the './c' directory run 'make' to build the memory images from "test.c"
 * In the "./vivado" directory, run "build.sh" to build the bitstream
