@@ -12,3 +12,5 @@ vivado/riscv.xpr
 vivado/tb_riscv_behav.wcfg
 vivado/usage_statistics_webtalk.html
 vivado/usage_statistics_webtalk.xml
+vivado/vivado.jou
+vivado/vivado.log
