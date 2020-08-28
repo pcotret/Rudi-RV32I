@@ -13,16 +13,11 @@ This was a holiday project over Christmas 2019/2020. It has been designed with t
 This currently works as intended for all my designs, but you are more than likely to discover bugs.
 
 ## What is special about this design?
-Rudi-RV32 is somewhat unique as it features no pipelining at all. All instructions can 
-complete in a single cycle, including the shift operations. Memory operations might take
-longer as the external bus can stall the CPU if required. 
+Rudi-RV32 is somewhat unique as it features no pipelining at all. All instructions can complete in a single cycle, including the shift operations. Memory operations might take longer as the external bus can stall the CPU if required. 
 
-Even with this lack of pipelining, the processor can run at > 80MHz in an Artix-7 grade
-1 FPGA, and a compact "minimal version" can run at over 50MHz.
+Even with this lack of pipelining, the processor can run at > 80MHz in an Artix-7 grade 1 FPGA, and a compact "minimal version" can run at over 50MHz.
 
-A full 32-bit system, with 4kB of Program memory and 4kB of RAM and a serial port can
-be realized in little as 750 LUTs - 575 for the CPU itself, the rest for the system
-bus and serial console.
+A full 32-bit system, with 4kB of Program memory and 4kB of RAM and a serial port can be realized in little as 750 LUTs - 575 for the CPU itself, the rest for the system bus and serial console.
 
 ## Project structure
 
@@ -63,7 +58,7 @@ make linux
 * In the './c' directory run 'make' to build the memory images from "test.c"
 * In the "./vivado" directory, run "build.sh" to build the bitstream
 
-You should now have a bitstream for Basys3 in ./bitstreams - program it and connect to the serial port at 19200.
+You should now have a bitstream for Nexys4 DDR in ./bitstreams - program it and connect to the serial port at 19200.
 
 ## Performance/size in different configurations:
 
