@@ -133,3 +133,9 @@ If you find this really useful please drop me an email to say thanks. I'll love 
 
 If you find this really useful or is used commercially, consider buying me a virtual pizza, virtual beer or virtual dinner via PayPal.
 
+## Download to the FPGA board
+
+```bash
+djtgcfg prog -d Nexys4DDR -i 0 -f nexys4ddr_top_level.bit 
+```
+
